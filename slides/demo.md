@@ -24,7 +24,7 @@ import spire.math._
 ```scala
 def pythagorean[A: Field: NRoot](x: A, y: A): A =
   (x ** 2 + y ** 2).sqrt
-  
+
 def quadratic[A: Field: NRoot](a: A, b: A, c: A): (A, A) = {
   val q = (b ** 2 - 4 * a * c).sqrt
   val t = 2 * a
@@ -32,4 +32,33 @@ def quadratic[A: Field: NRoot](a: A, b: A, c: A): (A, A) = {
 }
 ```
 
-Awesome!
+---
+
+```scala
+case class Ugh[A](a: A)
+def xyz[A: Field](x: A): A = x
+```
+
+---
+
+Some more?
+
+```scala
+val hux = "hux"
+def qux: String = "qux"
+
+def ugh[A: Field](a: A): A = ???
+
+type ξ[A] = (A, A)
+
+trait Hist { lhs =>
+  def ⊕(rhs: Hist): Hist
+}
+
+sealed trait Compass
+case object North extends Compass
+```
+
+---
+
+*Awesome!*
