@@ -7,8 +7,8 @@
 from os import listdir
 from os.path import join, splitext
 
-boiler1 = open("boiler1.html", "r").read()
-boiler2 = open("boiler2.html", "r").read()
+boiler1 = open("guts/boiler1.html", "r").read()
+boiler2 = open("guts/boiler2.html", "r").read()
 
 for name in listdir('slides'):
     base, _ = splitext(name)

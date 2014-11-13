@@ -34,29 +34,17 @@ def quadratic[A: Field: NRoot](a: A, b: A, c: A): (A, A) = {
 
 ---
 
-```scala
-case class Ugh[A](a: A)
-def xyz[A: Field](x: A): A = x
-```
-
----
-
-Some more?
+Let's have some more I guess...
 
 ```scala
 val hux = "hux"
 def qux: String = "qux"
-
-def ugh[A: Field](a: A): A = ???
 
 type ξ[A] = (A, A)
 
 trait Hist { lhs =>
   def ⊕(rhs: Hist): Hist
 }
-
-sealed trait Compass
-case object North extends Compass
 ```
 
 ---
