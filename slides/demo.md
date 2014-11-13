@@ -3,6 +3,8 @@
 This is a test of the *literate Scala* machinery.  This should end up
 in `target/scala-2.11/src_managed/main/foo.scala` as a comment.
 
+---
+
 ### Code Examples
 
 These should be compiled as actual, working Scala code. Here are some
@@ -14,6 +16,8 @@ import spire.algebra._
 import spire.implicits._
 import spire.math._
 ```
+
+---
 
 *Whew!* Now that that's settled, let's write some code!
 
