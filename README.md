@@ -43,6 +43,8 @@ what you can do:
   * Use `import xyz._` to import methods from `xyz.md`
   * Top-level code will run when the `xyz` object is referenced.
 5. Code generated from `xyz.md` is in `code/xyz.scala`.
+6. Run `render` to construct HTML slides
+7. Open the `html/` directory in a browser to see your slides.
 
 (Eventually, it might be nice to support this kind of code-generation
 via an SBT plugin. If that's something you're interested in working

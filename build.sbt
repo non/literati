@@ -15,7 +15,7 @@ scalacOptions ++= Seq(
   "-language:implicitConversions")
 
 sourceGenerators in Compile <+= sourceManaged in Compile map { dir =>
-  (file(".") / "slides" * "*.md").get.map { f =>
+  (file("slides") * "*.md").get.map { f =>
     val s = f.getName
     val i = s.lastIndexOf(".")
     val base = if (i < 0) s else s.substring(0, i)
@@ -39,5 +39,21 @@ sourceGenerators in Compile <+= sourceManaged in Compile map { dir =>
     val dest = dir / basename
     IO.write(dest, output)
     dest
+  }
+}
+
+lazy val render = taskKey[Unit]("Renders Markdown slides to HTML")
+
+render := {
+  val b1 = IO.read(file("guts") / "boiler1.html")
+  val b2 = IO.read(file("guts") / "boiler2.html")
+  (file("slides") * "*.md").get.foreach { f =>
+    val s = f.getName
+    val i = s.lastIndexOf(".")
+    val base = if (i < 0) s else s.substring(0, i)
+    val basename = base + ".html"
+    println(s"rendering $basename")
+    val md = IO.read(f)
+    IO.write(file("html") / basename, b1 + "\n" + md + "\n" + b2)
   }
 }
