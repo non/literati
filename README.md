@@ -7,14 +7,18 @@
 
 -- Donald Knuth, *Literate Programming*
 
-This is a simple project. The idea is to build slides which work with
-[Remark.js](https://github.com/gnab/remark) or
+This is a simple project, whose aim is to make it easy to create
+slides for talks about programming and source code.
+
+Specifically, we want to write our slides as
+[Markdown](http://daringfireball.net/projects/markdown/syntax) files
+which work with [Remark.js](https://github.com/gnab/remark) or
 [Deckset](http://www.decksetapp.com/), and then use a code-generator
 within [SBT](http://www.scala-sbt.org/) to make sure your code
 examples compile.
 
-The goal here is to support *literate* Scala programming from within
-Markdown documents, hence the name of this project.
+The ultimate goal is to support *literate* Scala programming (from
+within a Markdown document), hence the name of this project.
 
 ### Motivation
 
@@ -22,8 +26,7 @@ While preparing for [PNWScala](http://pnwscala.org/2014/index.html) I
 realized that it would be nice to make sure all my code examples
 compiled. I also wanted to easily load my examples into the REPL to
 play with interactively. I decided that it would be easy enough to
-generate valid Scala source files by transforming the
-[Markdown](http://daringfireball.net/projects/markdown/syntax) slides.
+generate valid Scala source files by transforming the Markdown slides.
 
 (You might also recognize building a general framework to support
 writing slides as a clever way to procrastinate on writing
