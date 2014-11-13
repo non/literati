@@ -60,8 +60,8 @@ syntax-highlight Scala. Since it uses [highlight.js](https://highlightjs.org/) I
 would be a simple matter to patch that library and improve my slides.
 (And in fact [I did so](https://github.com/isagalaev/highlight.js/pull/475).)
 
-However, Deckset does give users the ability to define (or improve)
-syntax highlighting support. And due to Apple's ridiculous
+However, Deckset does not give users the ability to define (or
+improve) syntax highlighting support. And due to Apple's ridiculous
 application-signing, it is impossible to manually-patch
 `Deckset.app/Contents/Resources/highlight.pack.js` with a custom
 build. *Ugh*.
