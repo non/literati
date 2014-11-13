@@ -1,5 +1,12 @@
 ## Literati
 
+> Let us change our traditional attitude to the construction of
+> programs: Instead of imagining that our main task is to instruct a
+> computer what to do, let us concentrate rather on explaining to
+> human beings what we want a computer to do.
+
+-- Donald Knuth, *Literate Programming*
+
 This is a simple project. The idea is to build slides which work with
 [Remark.js](https://github.com/gnab/remark) or
 [Deckset](http://www.decksetapp.com/), and then use a code-generator
