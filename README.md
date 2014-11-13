@@ -37,14 +37,15 @@ what you can do:
   * File names should end in `.md`.
   * (This is the time-consuming part.)
 3. Launch SBT
-4. Run `compile` to compile your code.
-5. Run `console` to launch a REPL:
+4. Run `render` to construct HTML slides
+  * Every `xyz.md` file is transformed into `html/xyz.html`.
+  * Open these HTML files in your browser to start a presentation.
+5. Run `compile` to compile your code.
+  * Generated code for `xyz.md` is located at `code/xyz.scala`.
+6. Run `console` to launch a REPL:
   * Every `xyz.md` file is translated to an `xyz` object.
   * Use `import xyz._` to import methods from `xyz.md`
   * Top-level code will run when the `xyz` object is referenced.
-5. Code generated from `xyz.md` is in `code/xyz.scala`.
-6. Run `render` to construct HTML slides
-7. Open the `html/` directory in a browser to see your slides.
 
 (Eventually, it might be nice to support this kind of code-generation
 via an SBT plugin. If that's something you're interested in working
